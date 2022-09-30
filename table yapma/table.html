@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,td {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <label for="satir">satir sayısı</label> <br>    
+    <input type="text" id="satir"><br>
+    <label for="sutun">sütun sayısı</label><br>
+    <input type="text" id="sutun"><br>
+    <button id="createtable">tablo oluştur</button>
+    <div id="coverdiv"></div>
+
+    <script>
+
+let create=document.getElementById("createtable");
+
+
+create.onclick=function(){
+let satir = document.getElementById("satir").value;
+let sutun = document.getElementById("sutun").value;
+let coverdiv=document.getElementById("coverdiv");
+let sayac=1;
+
+
+let table = document.createElement("table");
+document.getElementById("coverdiv").innerHTML="";
+coverdiv.appendChild(table);
+for(let i=1;i<satir;i++){
+    let tr=document.createElement("tr");
+    table.appendChild(tr);
+        for(let j=1;j<sutun;j++){
+        let td=document.createElement("td");
+        
+        tr.appendChild(td);
+        
+        td.innerHTML=sayac++;    }
+
+}
+
+
+}
+
+    </script>
+</body>
+</html>
