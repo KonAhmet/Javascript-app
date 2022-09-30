@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hp{
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>hipotenüs bulma</h3>
+    <label class="hp" for="1knr">1.kenarı giriniz</label> <br>
+    <input class="hp" type="text" id="knr1"><br><br>
+    <label class="hp" for="1knr">2.kenarı giriniz</label><br>
+    <input class="hp" type="text" id="knr2"><br>
+    <button class="hp" id="calculate">hesapla</button><br><br>
+    <p id="result">sonuç</p>
+
+
+    <script>
+        let knr1,knr2,calculateBtn,result;
+        knr1=document.querySelector("#knr1");
+        knr2=document.querySelector("#knr2");
+        calculateBtn=document.querySelector("#calculate");
+        result=document.querySelector("#result");
+        calculateBtn.addEventListener("click",function(){
+result=Math.sqrt((knr1.value*knr1.value) + (knr2.value*knr2.value) );
+document.querySelector("#result").innerHTML="hipotenus kenar uzunluğu "+ result;
+})
+
+    </script>
+</body>
+</html>
