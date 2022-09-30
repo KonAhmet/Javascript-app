@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="btn">
+
+    </div>
+    <button id="createbutton"> buton oluştur</button>
+    
+    <script>
+        document.querySelector("#createbutton").onclick=function(){
+            let parentdiv=document.querySelector("#btn");
+            let button= document.createElement("button");
+            button.innerHTML="sanane bro";
+            parentdiv.appendChild(button);
+        }
+
+
+    </script>
+</body>
+</html>
