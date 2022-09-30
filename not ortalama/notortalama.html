@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="not1">vize notu: </label><br>
+    <input type="text" id="not1"><br>
+    <label for="not2">final notu: </label><br>
+    <input type="text" id="not2"><br><br>
+    <button id="hesapla">hesapla</button><br><br>
+    <label for="ort">ortalama notun: </label><br>
+    <input type="text" id="ort"><br>
+    <label for="basari">başarı durumu: </label><br>
+    <input type="text" id="basari"><br>
+
+
+<script>
+
+
+    hesapla=document.querySelector("#hesapla");
+    hesapla.addEventListener("click",function(){
+        let not1,not2,ort,basari,hesapla;
+    not1=document.querySelector("#not1").value;
+    not2=document.querySelector("#not2").value;
+    ort=document.querySelector("#ort");
+    basari=document.querySelector("#basari");
+        let result=(Number(not1)+Number(not2))/2;
+        ort.value=result;
+
+        
+        if(result<50) {
+            basari.value="kaldınız !!"
+
+        }else{
+            basari.value="geçtiniz!"
+        }
+
+    })
+    
+</script>
+</body>
+</html>
